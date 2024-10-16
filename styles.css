@@ -127,7 +127,7 @@ body {
     }
 
     .choices {
-        flex-direction: column; /* Stack choices vertically */
+        flex-direction: row; /* Stack choices vertically */
     }
 
     .choice {
@@ -141,7 +141,7 @@ body {
     }
 
     .result-cards {
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: row; /* Stack cards vertically */
     }
 
     .card {
