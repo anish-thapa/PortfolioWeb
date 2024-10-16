@@ -127,13 +127,14 @@ body {
     }
 
     .choices {
-        flex-direction: row; /* Stack choices vertically */
+        flex-direction: row; /* Maintain row layout */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
     }
 
     .choice {
-        width: 60px; /* Smaller size for smaller screens */
-        height: 60px;
-        margin: 10px 0; /* Add margin between choices */
+        width: 50px; /* Smaller size for smaller screens */
+        height: 50px;
+        margin: 10px; /* Add margin between choices */
     }
 
     .choose-message {
@@ -141,11 +142,16 @@ body {
     }
 
     .result-cards {
-        flex-direction: row; /* Stack cards vertically */
+        flex-direction: row; /* Maintain row layout */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
 
     .card {
-        max-width: 100%; /* Allow full width on small screens */
-        margin: 10px 0; /* Margin between cards */
+        max-width: 80px; /* Allow smaller width on small screens */
+        margin: 10px; /* Margin between cards */
+    }
+
+    .card h3 {
+        font-size: 14px; /* Smaller title font size */
     }
 }
