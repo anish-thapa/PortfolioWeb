@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 90%; /* Full width on small screens */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score {
+    flex: 1;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.choice {
+    width: 80px; /* Set a default width */
+    height: 80px; /* Set a default height */
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.choice:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.choose-message {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    max-width: 120px; /* Max width for larger screens */
+    margin: 0 10px; /* Margin between cards */
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Stack title and image vertically */
+    align-items: center; /* Center align content */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.card img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card h3 {
+    margin: 10px 0 0; /* Space above title */
+}
+
+/* Button Styles */
+.button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    margin: 5px; /* Margin between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .score-board {
+        flex-direction: column; /* Stack scores vertically */
+        align-items: center; /* Center align */
+    }
+
+    .score {
+        margin: 10px 0; /* Margin between scores */
+    }
+
+    .choices {
+        flex-direction: column; /* Stack choices vertically */
+    }
+
+    .choice {
+        width: 60px; /* Smaller size for smaller screens */
+        height: 60px;
+        margin: 10px 0; /* Add margin between choices */
+    }
+
+    .choose-message {
+        font-size: 18px; /* Slightly smaller font size */
+    }
+
+    .result-cards {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .card {
+        max-width: 100%; /* Allow full width on small screens */
+        margin: 10px 0; /* Margin between cards */
+    }
+}
