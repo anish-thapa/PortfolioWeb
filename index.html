@@ -1,485 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anish Thapa</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odgy Young | Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <link rel="icon" type="Favicon" href="a4.png" />
-  </head>
-  <body>
-    <div class="overlay" id="overlay"></div>
+    <canvas id="sprinkles-canvas"></canvas>
 
-    <header>
-      <a href="/index.html" class="logo">Anish Thapa</a>
-      <nav class="desktop-nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-toggle" id="themeToggle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-      </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">Anish Thapa</div>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="burger" id="burger-menu" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
     </header>
 
-    <div class="sidebar" id="sidebar">
-      <button class="sidebar-close" id="sidebarClose">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <nav class="sidebar-nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="sidebar-theme-toggle">
-        <span>Dark Mode</span>
-        <button class="theme-toggle" id="sidebarThemeToggle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-
     <main>
-      <section class="intro" id="about">
-        <h1>
-          Building, learning, <br />
-          <span class="second">and always exploring.</span>
-        </h1>
-        <p>
-          I'm a full-stack developer and a second-year undergraduate student
-          with a passion for coding, problem-solving, and continuous growth.
-          I’ve spent my time developing software, working on exciting projects,
-          and expanding my technical skills. Always eager to take on new
-          challenges and push the limits of what I can create. 
-          <!-- Want to know even more <a href="/about.html">about me?</a> -->
-        </p>
-        <div class="location">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <span>Itahari, Nepal</span>
-      </div>
-      </section>
-
-      <div class="section-divider"></div>
-      <section class="skills">
-        <div class="section-header">
-            Skills 
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </div>
-
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    
-                    <span class="skill-tag">Responsive Design</span>
+        <section id="hero" class="section hero-section">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1 data-aos="fade-up" data-aos-delay="100">Anish Thapa</h1>
+                <h2 data-aos="fade-up" data-aos-delay="200">Data Analyst</h2>
+                <p class="tagline" data-aos="fade-up" data-aos-delay="300">
+                    Transforming Data into Actionable Insights <br> <i class="fas fa-map-marker-alt fa-fw"></i> Based in Nepal  
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
 
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">PHP</span>
-                    
+        <section id="about" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">About Me</h2>
+                <div class="about-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-image" data-aos="zoom-in-up" data-aos-delay="200">
+                        <img src="https://i.pinimg.com/736x/b5/e6/81/b5e681d0c468ce78597b7ee5b2357964.jpg" alt="Odgy Young - Data Analyst Profile">
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm Anish Thapa, a passionate Data Analyst based in the beautiful country of Nepal. I thrive on uncovering hidden patterns and stories within data.</p>
+                        <p>With a strong foundation in Python, SQL, and data visualization tools like Power BI and Tableau, I specialize in cleaning, analyzing, and presenting data to drive informed business decisions. I'm proficient in Excel for quick analysis and reporting.</p>
+                        <p>I'm always eager to learn new techniques and tackle challenging problems. Let's connect and see how data can empower your goals!</p>
+                    </div>
+                  
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category">
-                <h3>Tools & Others</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">Figma</span>
-                    
-                    <span class="skill-tag">NPM</span>
-                    <span class="skill-tag">Webpack</span>
+        <section id="skills" class="section bg-darker">
+            <div class="container">
+                <h2 data-aos="fade-up">My Toolkit</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
+                        <i class="fab fa-python fa-3x"></i>
+                        <h3>Python</h3>
+                        <p>Pandas, NumPy, Data Cleaning, Automation</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-database fa-3x"></i>
+                        <h3>SQL</h3>
+                        <p>Querying, Extraction, Management (PostgreSQL, MySQL)</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+                        <i class="fas fa-chart-bar fa-3x"></i>
+                        <h3>Power BI</h3>
+                        <p>Dashboards, DAX, Data Modeling, Reporting</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-chart-pie fa-3x"></i>
+                        <h3>Tableau</h3>
+                        <p>Visualization, Storytelling, Calculated Fields</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+                        <i class="fas fa-file-excel fa-3x"></i>
+                        <h3>Excel</h3>
+                        <p>Pivot Tables, VLOOKUP, Power Query, VBA Basics</p>
+                    </div>
+                     <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-brain fa-3x"></i>
+                        <h3>Core Skills</h3>
+                        <p>Statistics, Problem-Solving, Communication</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="section-divider"></div>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://linda-hoang.com/wp-content/uploads/2014/10/img-placeholder-dark.jpg" alt="Project 1 Thumbnail - Sales Analysis Dashboard">
+                        <div class="project-info">
+                            <h3>Sales Performance Analysis</h3>
+                            <p>Analyzed sales data using Python, built interactive dashboards in Power BI to identify top-performing regions and products.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag"><i class="fab fa-python fa-fw"></i> Python</span>
+                                <span class="tool-tag"><i class="fas fa-chart-bar fa-fw"></i> Power BI</span>
+                                <span class="tool-tag"><i class="fas fa-database fa-fw"></i> SQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">View Report</a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small"><i class="fab fa-github fa-fw"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-      <section class="updates">
-        <div class="section-header">
-          Updates
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://linda-hoang.com/wp-content/uploads/2014/10/img-placeholder-dark.jpg" alt="Project 2 Thumbnail - Customer Segmentation">
+                        <div class="project-info">
+                            <h3>Customer Segmentation with Tableau</h3>
+                            <p>Utilized Tableau to visualize customer demographics and purchase history, creating segments for targeted marketing campaigns.</p>
+                             <div class="project-tools">
+                                <span class="tool-tag"><i class="fas fa-chart-pie fa-fw"></i> Tableau</span>
+                                <span class="tool-tag"><i class="fas fa-file-excel fa-fw"></i> Excel</span>
+                             </div>
+                             <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Live Demo</a>
+                             </div>
+                        </div>
+                    </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="date">
-              Mar 2025
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+                </div>
             </div>
-            <div class="item-title">Social Media Site</div>
-            <div class="item-description">On Progress</div>
-          </div>
+        </section>
 
-          <div class="timeline-item">
-            <div class="date">
-              Oct 2023
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+        <section id="contact" class="section bg-darker">
+            <div class="container">
+                <h2 data-aos="fade-up">Get In Touch</h2>
+                <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="50">Have a project in mind or just want to connect? Feel free to reach out!</p>
+                <div class="contact-container">
+                    <div class="contact-details" data-aos="fade-up" data-aos-delay="100">
+                         <div class="contact-item">
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            <span>Koshi, Nepal</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <a href="mailto:try.anisht@gmail.com">try.anisht@gmail.com</a>
+                        </div>
+                         <div class="contact-item">
+                            <i class="fab fa-linkedin fa-fw"></i>
+                             <a href="https://linkedin.com/in/anishthapa" target="_blank" rel="noopener noreferrer">linkedin.com/in/anishthapa</a>
+                        </div>
+                         <div class="contact-item">
+                            <i class="fab fa-github fa-fw"></i>
+                             <a href="https://github.com/anish-thapa target="_blank" rel="noopener noreferrer">github.com/anish-thapa</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="item-title">Started Undergrad Program</div>
-            <div class="item-description">
-              Currently pursuing a Bachelor's degree in IT
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="date">May 2023</div>
-            <div class="item-title">Graduated High School</div>
-            <div class="item-description">
-              Specialized in Accounting and Business Studies. Gained knowledge
-              in financial principles, and business management.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="date">Nov 2021</div>
-            <div class="item-title">
-              Built my first computer program using HTML.
-            </div>
-            <div class="item-description">
-          Developed a basic webpage using only HTML.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider"></div>
-
-      <section class="projects" id="projects">
-        <div class="section-header">
-          Projects
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-info">
-              <div class="project-date">Feb 2025 - March 2025</div>
-              <div class="project-title">Blogie</div>
-              <div class="project-description">
-                Developed a blogging website, overseeing all aspects from design to implementation.
-              </div>
-              <a href="http://www.blogie.xyz/" class="project-link" target="_blank">
-                blogie.xyz
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-            </div>
-            <div class="project-image">
-              <img src="blogiefront.png" alt="Blogie homepage" />
-            </div>
-          </div>
-          
-          <div class="project-card">
-            <div class="project-info">
-              <div class="project-date">Dec 2024 - feb 2025</div>
-              <div class="project-title">JobPortal</div>
-              <div class="project-description">
-                Created a job portal for employees and employers, managing the entire process from design through development
-              </div>
-              <a href="http://www.jobportalbyanish.wuaze.com/" class="project-link" target="_blank">
-                jobportalbyanish.wuaze.com
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-            </div>
-            <div class="project-image">
-              <img src="jobportal.png" alt="JobPortal homepage" />
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-info">
-              <div class="project-date">Aug 2024 - Oct 2024</div>
-              <div class="project-title">CapturedMoments</div>
-              <div class="project-description">
-                Developed a portfolio page for a photography company, handling all aspects of design & development.
-              </div>
-              <a href="http://www.capturedmoments.info.np/" class="project-link" target="_blank">
-                capturedmoments.info.np
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-            </div>
-            <div class="project-image">
-              <img src="photography.png" alt="capturedmoments homepage" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider"></div>
-
-      <h3>Let's chat</h3>
-  
-      <p style="margin-top: 30px; font-size: 14px;">
-        Or reach me directly at
-        <a href="mailto:iam.anisht@gmail.com">iam.anisht@gmail.com</a><br />
-        Connect on
-        <a href="https://www.linkedin.com/in/anishthapa07/" target="_blank"
-          >Linkedin</a
-        >
-        or ask on my <a href="#">QnA</a>
-      </p>
+        </section>
     </main>
 
-    <footer>
-      <div>&copy; Anish Thapa <span id="currentYear"></span></div>
-
-      <div class="footer-links">
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=iam.anisht@gmail.com"
-          target="_blank"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            ></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/kaizokuanish/" target="_blank">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
-         <a href="https://www.linkedin.com/in/anishxthapa/" target="_blank">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
-            ></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
-
-        <a href="#" target="_blank">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-            ></path>
-          </svg>
-        </a>
-      </div>
+    <footer id="main-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Odgy Young. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script src="main.js"></script>
-  </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
