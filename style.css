@@ -630,14 +630,17 @@ img {
     }
 }
 
+/* === UPDATED Keyframes for Text Float === */
 @keyframes textFloat {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px); /* Float up slightly */
+        /* Increased vertical distance */
+        transform: translateY(-10px);
     }
 }
+/* ====================================== */
 
 
 /* --- Media Queries (Mobile Friendliness) --- */
